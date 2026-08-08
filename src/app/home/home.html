@@ -1,1 +1,29 @@
-<p>home works!</p>
+<section class="inicio">
+  <div class="contenedor contenido-inicio">
+    <div class="texto-inicio">
+      <h2>Tecnología para tu día a día</h2>
+      <p>Nomadaware ofrece componentes y equipos para estudiar, trabajar y mejorar tu computador.</p>
+    </div>
+
+    <img class="imagen-inicio" [src]="imagenInicio"  />
+  </div>
+</section>
+
+<section class="contenedor servicios">
+  <h2 class="titulo-seccion">Lo que ofrecemos</h2>
+
+  <div class="lista-servicios">
+    @for (servicio of servicios; track servicio.id) {
+      <article>
+        <h3>{{ servicio.nombre }}</h3>
+        <p>{{ servicio.descripcion }}</p>
+
+        @if (servicio.imagen) {
+          <div class="imagenes-equipos">
+            <img [src]="servicio.imagen" />
+          </div>
+        }
+      </article>
+    }
+  </div>
+</section>
