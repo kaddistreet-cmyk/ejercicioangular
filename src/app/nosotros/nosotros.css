@@ -1,0 +1,32 @@
+.nosotros {
+  background-color: #edf7f6;
+}
+
+.valores {
+  display: flex;
+  gap: 15px;
+}
+
+.valores article {
+  flex: 1;
+  padding: 18px;
+  background-color: #ffffff;
+  border: 1px solid #b9d8d5;
+}
+
+.valores h3 {
+  color: #08524f;
+  margin-bottom: 8px;
+}
+
+.icono-nosotros {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .valores {
+    flex-direction: column;
+  }
+}

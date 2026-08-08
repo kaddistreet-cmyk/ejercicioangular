@@ -1,1 +1,21 @@
-<p>nosotros works!</p>
+<section class="nosotros">
+  <div class="contenedor">
+    <h2 class="titulo-seccion">Sobre Nomadaware</h2>
+    <p class="descripcion-seccion">
+      Somos un negocio dedicado a la venta de componentes y equipos tecnológicos.
+    </p>
+
+    <div class="valores">
+      @for (item of informacion; track item.id) {
+        <article>
+          @if (item.imagen) {
+            <img class="icono-nosotros" [src]="item.imagen"/>
+          }
+
+          <h3>{{ item.titulo }}</h3>
+          <p>{{ item.descripcion }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
