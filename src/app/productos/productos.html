@@ -1,1 +1,29 @@
-<app-tarjeta-producto></app-tarjeta-producto>
+<section class="productos contenedor">
+  <h2 class="titulo-seccion">Productos</h2>
+
+  <div class="ejemplo-angular">
+    <p>
+      Tu nombre es {{ nombre }}, tienes {{ edad }} años y el próximo año tendrás {{ edad + 1 }} años.
+    </p>
+    <p>La multiplicación de 7 × 7 es {{ 7 * 7 }}.</p>
+  </div>
+
+  <div class="lista-productos">
+    @for (producto of productos; track producto.id) {
+      <article class="producto">
+        <img [src]="producto.imagen" />
+        <div class="informacion-producto">
+          <h3>{{ producto.nombre }}</h3>
+          <p>Precio: ${{ producto.precio }}</p>
+          <p>Stock: {{ producto.stock }}</p>
+
+          @if (producto.stock > 0) {
+            <p class="disponible">Producto disponible</p>
+          } @else {
+            <p class="no-disponible">Producto no disponible</p>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>
