@@ -1,23 +1,27 @@
 .encabezado {
-    background-color: #08524f;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #156061;
 }
 
-nav {
-    display: flex;
-    gap: 20px;
+.encabezado h1 {
+  color: #ffffff;
+  font-size: 28px;
 }
 
-a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-    color: white;
-    font-size: 20px;
+.nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
