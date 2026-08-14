@@ -5,7 +5,7 @@
       <p>Nomadaware ofrece componentes y equipos para estudiar, trabajar y mejorar tu computador.</p>
     </div>
 
-    <img class="imagen-inicio" [src]="imagenInicio"  />
+    <img class="imagen-inicio" [src]="imagenInicio" />
   </div>
 </section>
 
@@ -14,16 +14,36 @@
 
   <div class="lista-servicios">
     @for (servicio of servicios; track servicio.id) {
-      <article>
-        <h3>{{ servicio.nombre }}</h3>
-        <p>{{ servicio.descripcion }}</p>
+    <article>
+      <h3>{{ servicio.nombre }}</h3>
+      <p>{{ servicio.descripcion }}</p>
 
-        @if (servicio.imagen) {
-          <div class="imagenes-equipos">
-            <img [src]="servicio.imagen" />
-          </div>
-        }
-      </article>
+      @if (servicio.imagen) {
+      <div class="imagenes-equipos">
+        <img [src]="servicio.imagen" />
+      </div>
+      }
+    </article>
     }
   </div>
+
+</section>
+
+<section class="contenedor servicios">
+  <h2 class="titulo-seccion">Sobre nosotros</h2>
+  
+    <div class="lista-servicios">
+      @for (item of informacion; track item.id) {
+        <article>
+          @if (item.imagen) {
+            <div class="imagenes-equipos">
+            <img class="icono-nosotros" [src]="item.imagen"/>
+            </div>
+          }
+
+          <h3>{{ item.titulo }}</h3>
+          <p>{{ item.descripcion }}</p>
+        </article>
+      }
+    </div>
 </section>

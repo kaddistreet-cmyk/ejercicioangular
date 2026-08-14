@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MisionVision } from '../service/mision-vision';
 
 @Component({
   selector: 'app-home',
@@ -30,5 +31,10 @@ export class Home {
       descripcion: 'Información sencilla para cada compra.',
       imagen: '',
     },
+    
   ];
+
+  private misionVisionService = inject(MisionVision);
+
+  informacion = this.misionVisionService.obtenerInformacion();
 }

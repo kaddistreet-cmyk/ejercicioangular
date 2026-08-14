@@ -74,4 +74,14 @@
   .inicio h2 {
     font-size: 26px;
   }
+
+  .nosotros {
+    background-color: #edf7f6;
+  }
+
+  .valores {
+    display: flex;
+    gap: 15px;
+  }
+
 }
